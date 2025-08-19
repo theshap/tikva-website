@@ -1,13 +1,43 @@
+'use client';
+
+import { useEffect, useState } from 'react';
+
 export default function Home() {
+  const [logoSize, setLogoSize] = useState('256px');
+
+  useEffect(() => {
+    const updateSize = () => {
+      const width = window.innerWidth;
+      if (width >= 1024) {
+        setLogoSize('500px');
+      } else if (width >= 768) {
+        setLogoSize('350px');
+      } else {
+        setLogoSize('256px');  // Minimum size is now 256px
+      }
+    };
+
+    updateSize();
+    window.addEventListener('resize', updateSize);
+    return () => window.removeEventListener('resize', updateSize);
+  }, []);
+
   return (
     <main className="min-h-screen bg-gradient-to-b from-white to-gray-50 flex items-center justify-center px-4">
       <div className="text-center">
         <img 
           src="/tikva.svg" 
           alt="Tikva Logo" 
-          className="w-24 h-24 sm:w-48 sm:h-48 md:w-64 md:h-64 lg:w-72 lg:h-72 mx-auto mb-16 opacity-85 hover:opacity-100 transition-all duration-500"
+          style={{ 
+            width: logoSize, 
+            height: logoSize,
+            transition: 'all 0.5s ease',
+            opacity: 0.85
+          }}
+          className="mx-auto mb-16 hover:opacity-100"
         />
-<p 
+        
+        <p 
           className="text-sm sm:text-base text-gray-500 tracking-[0.3em]"
           style={{ 
             fontFamily: "'Inter', sans-serif",
