@@ -5,7 +5,7 @@ export default function Home() {
         <img 
           src="/tikva.svg" 
           alt="Tikva Logo" 
-          className="w-44 h-44 sm:w-56 sm:h-56 md:w-72 md:h-72 mx-auto mb-16 opacity-85 hover:opacity-100 transition-opacity duration-500"
+          className="w-24 h-24 sm:w-48 sm:h-48 md:w-64 md:h-64 lg:w-72 lg:h-72 mx-auto mb-16 opacity-85 hover:opacity-100 transition-all duration-500"
         />
 <p 
           className="text-sm sm:text-base text-gray-500 tracking-[0.3em]"
