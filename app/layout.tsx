@@ -4,6 +4,9 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Tikva - Coming Soon",
   description: "Tikva platform coming soon",
+  icons: {
+    icon: '/icon.svg',
+  },
 };
 
 export default function RootLayout({
