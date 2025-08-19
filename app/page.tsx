@@ -23,7 +23,7 @@ export default function Home() {
             fontWeight: 300
           }}
         >
-          info@tikva.ai
+          <a href="mailto:info@tikva.ai" className="text-inherit no-underline" style={{ color: 'inherit', textDecoration: 'none' }}>info@tikva.ai</a>
         </p>
         <div className="flex items-center justify-center mt-12 space-x-3">
           <div className="w-8 h-px bg-gray-300"></div>
